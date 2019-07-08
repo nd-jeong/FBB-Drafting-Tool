@@ -46,7 +46,7 @@ https://drive.google.com/open?id=1-Jc-4OS_-n2m7RmYFye1J74-i6yonV6o
 
 - User authentication
 - Make API call and populate database with results
-- Users can create league with custom settings
+- Users can create leagues with custom team names and draft order
 - User takes turns drafting a player to each team
 - User can see their team's strengths through infographics
 
@@ -55,6 +55,7 @@ https://drive.google.com/open?id=1-Jc-4OS_-n2m7RmYFye1J74-i6yonV6o
 - Add timer for mock drafts
 - Allow more advanced statistics (Double-double, triple-double, etc)
 - Allow users to preview exchanging players to see the effect on their team
+- Users can create leagues with custom settings
 
 ## Architectural Design
 
