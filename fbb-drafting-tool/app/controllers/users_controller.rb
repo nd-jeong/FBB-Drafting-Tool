@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authorize_request, except: :create
   before_action :set_user, only: [:show, :update, :destroy]
 
   # GET /users
@@ -16,9 +17,9 @@ class UsersController < ApplicationController
   # POST /users
   def create
     @user = User.new(user_params)
-
+    @user.password = params[:password]
     if @user.save
-      render json: @user, status: :created, location: @user
+      handle_login user_params[:email], params[:password]
     else
       render json: @user.errors, status: :unprocessable_entity
     end
@@ -46,6 +47,6 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:email, :password_digest)
+      params.require(:user).permit(:email, :password)
     end
 end
