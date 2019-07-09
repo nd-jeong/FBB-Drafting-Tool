@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  league_name: MyString
+  num_teams: 1
+  num_players: 1
+  pg_num: 1
+  g_num: 1
+  sg_num: 1
+  sf_num: 1
+  f_num: 1
+  pf_num: 1
+  c_num: 1
+  util_num: 1
+  bench_num: 1
+  user: one
+
+two:
+  league_name: MyString
+  num_teams: 1
+  num_players: 1
+  pg_num: 1
+  g_num: 1
+  sg_num: 1
+  sf_num: 1
+  f_num: 1
+  pf_num: 1
+  c_num: 1
+  util_num: 1
+  bench_num: 1
+  user: two

@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  position: MyString
+  points: 9.99
+  assists: 9.99
+  rebounds: 9.99
+  threes: 9.99
+  field_goal_pct: 9.99
+  free_throw_pct: 9.99
+  steals: 9.99
+  blocks: 9.99
+  turnovers: 9.99
+  team: one
+
+two:
+  first_name: MyString
+  last_name: MyString
+  position: MyString
+  points: 9.99
+  assists: 9.99
+  rebounds: 9.99
+  threes: 9.99
+  field_goal_pct: 9.99
+  free_throw_pct: 9.99
+  steals: 9.99
+  blocks: 9.99
+  turnovers: 9.99
+  team: two
