@@ -12,7 +12,7 @@ class ApplicationController < ActionController::API
         end
     end
 
-    def handle_login email, password
+    def handle_login(email, password)
         @user = User.find_by_email(email)
             if @user.authenticate(password) #authenticate method provided by Bcrypt and 'has_secure_password'
                 token = JsonWebToken.encode(user_id: @user.id, email: @user.email)
