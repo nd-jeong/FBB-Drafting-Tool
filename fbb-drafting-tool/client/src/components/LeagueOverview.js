@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 class LeagueOverview extends Component {
     constructor() {
@@ -21,8 +22,8 @@ class LeagueOverview extends Component {
     render() {
         const team = this.state.teams.map(team => {
             return(
-                <div>
-                    {team.team_name}
+                <div key={team.id}>
+                    <Link to={`/user/${this.props.match.params.user_id}/leagues/${this.props.match.params.league_id}/team/${team.id}`}>{team.team_name}</Link>
                 </div>
             )
         })

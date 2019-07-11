@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2019_07_09_144334) do
     t.decimal "steals"
     t.decimal "blocks"
     t.decimal "turnovers"
+    t.integer "games_played"
     t.bigint "league_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -66,6 +67,7 @@ ActiveRecord::Schema.define(version: 2019_07_09_144334) do
     t.decimal "steals"
     t.decimal "blocks"
     t.decimal "turnovers"
+    t.integer "games_played"
     t.bigint "team_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

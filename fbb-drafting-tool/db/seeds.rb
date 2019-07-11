@@ -34,18 +34,19 @@ def get_player_data(personId)
         turnovers = totals['topg']
         steals = totals['spg']
         blocks = totals['bpg']
-        threes = totals['tpp']
+        threes = totals['tpm']
         field_goal_pct = totals['fgp']
         free_throw_pct = totals['ftp']
+        games_played = totals['gamesPlayed']
 
-        AvailablePlayer.create(first_name: @first_name, last_name: @last_name, position: @position, points: points, assists: assists, rebounds: rebounds, threes: threes, field_goal_pct: field_goal_pct, free_throw_pct: free_throw_pct, steals: steals, blocks: blocks, turnovers: turnovers, league_id: 1)
+        AvailablePlayer.create(first_name: @first_name, last_name: @last_name, position: @position, points: points, assists: assists, rebounds: rebounds, threes: threes, field_goal_pct: field_goal_pct, free_throw_pct: free_throw_pct, steals: steals, blocks: blocks, turnovers: turnovers, games_played: games_played, league_id: 1)
     end
 end
 
 require 'uri'
 require 'net/http'
 require 'openssl'
-require 'JSON'
+require 'JSON'  
 
 url = URI("http://data.nba.net/data/10s/prod/v1/2018/players.json")
 

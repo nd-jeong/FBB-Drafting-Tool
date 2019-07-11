@@ -13,6 +13,7 @@ class CreateAvailablePlayers < ActiveRecord::Migration[5.2]
       t.decimal :steals
       t.decimal :blocks
       t.decimal :turnovers
+      t.integer :games_played
       t.references :league, foreign_key: true
 
       t.timestamps

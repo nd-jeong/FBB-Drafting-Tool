@@ -34,7 +34,7 @@ class UserHomePage extends Component {
     render() {
         const league = this.state.leagues.map(league => {
             return(
-                <div>
+                <div key={league.id}>
                     <Link to={`/user/${this.props.match.params.user_id}/leagues/${league.id}`}>{league.league_name}</Link>
                 </div>
             )

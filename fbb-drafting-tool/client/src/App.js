@@ -6,6 +6,8 @@ import LoginForm from './components/LoginForm';
 import LandingPage from './components/LandingPage';
 import UserHomePage from './components/UserHomePage';
 import LeagueOverview from './components/LeagueOverview';
+import TeamOverview from './components/TeamOverview';
+import DraftPage from './components/DraftPage';
 import './App.css';
 
 class App extends Component {
@@ -51,7 +53,9 @@ class App extends Component {
             login: false
         });
 
-        return <Redirect to='/'/>
+        if (this.state.login === false) {
+            return <Redirect to='/'/>
+        }
     }
     
     render() {
@@ -75,6 +79,8 @@ class App extends Component {
                             {...props} handleLogout={this.handleLogout} login={this.state.login} currentUser={currentUser}
                         />}/>
                         <Route exact path='/user/:user_id/leagues/:league_id' component={LeagueOverview}/>
+                        <Route exact path='/user/:user_id/leagues/:league_id/team/:team_id' component={TeamOverview}/>
+                        <Route exact path='/user/:user_id/leagues/:league_id/team/:team_id/draft' component={DraftPage}/>
                     </Switch>
                 </Router>
             </div>

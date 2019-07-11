@@ -1,5 +1,5 @@
 class TeamPlayersController < ApplicationController
-  before_action :set_team_player, only: [:show, :update, :destroy]
+#   before_action :set_team_player, only: [:show, :update, :destroy, :create]
 
   # GET /team_players
   def index
@@ -15,13 +15,18 @@ class TeamPlayersController < ApplicationController
 
   # POST /team_players
   def create
-    @team_player = TeamPlayer.new(team_player_params)
+    team = Team.find params[:team_id]
 
-    if @team_player.save
-      render json: @team_player, status: :created, location: @team_player
-    else
-      render json: @team_player.errors, status: :unprocessable_entity
-    end
+    team.team_players << TeamPlayer.new(team_player_params)
+
+    render json: {team_player: team.team_players.last}
+    # @team_player = TeamPlayer.new(team_player_params)
+
+    # if @team_player.save
+    #   render json: @team_player, status: :created, location: @team_player
+    # else
+    #   render json: @team_player.errors, status: :unprocessable_entity
+    # end
   end
 
   # PATCH/PUT /team_players/1
@@ -40,9 +45,9 @@ class TeamPlayersController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_team_player
-      @team_player = TeamPlayer.find(params[:id])
-    end
+    # def set_team_player
+    #   @team_player = TeamPlayer.find(params[:id])
+    # end
 
     # Only allow a trusted parameter "white list" through.
     def team_player_params
