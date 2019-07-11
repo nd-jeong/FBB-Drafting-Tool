@@ -80,9 +80,9 @@ https://www.lucidchart.com/invitations/accept/3ee24fc7-d76c-49ac-844e-82e7be70da
 
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
-| Create databases | H | 6hrs|  |
-| Work with API to populate database | H | 8hrs|  |
-| Authentication | H | 4hrs|  |
+| Create databases | H | 6hrs| 6hrs |
+| Work with API to populate database | H | 8hrs| 12hrs |
+| Authentication | H | 4hrs| 4hrs |
 | Create landing page | H | 3hrs|  |
 | Create new user form component | H | 3hrs|  |
 | Create user's league component | H | 3hrs|  |
@@ -102,7 +102,7 @@ https://www.lucidchart.com/invitations/accept/3ee24fc7-d76c-49ac-844e-82e7be70da
 | Library | What it Does | 
 | --- | :---: |  
 | Bootstrap/Material UI | Used to help style my application | 
-| Sports Radar API | Used to get all player info | 
+| Data.nba.net | Used to get all player info | 
 
 ## Code Snippet
 
@@ -110,7 +110,7 @@ Use this section to include a brief code snippet of functionality that you are p
 
 ## Change Log
 
- Use this section to document what changes were made and the reasoning behind those changes.  
+- Changed the API used for player data due to limited api calls per month
 
 #### SAMPLE.....
 | Original Plan | Outcome | 

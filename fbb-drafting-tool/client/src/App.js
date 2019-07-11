@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-ro
 import axios from 'axios';
 import decode from 'jwt-decode';
 import LoginForm from './components/LoginForm';
+import LandingPage from './components/LandingPage';
+import UserHomePage from './components/UserHomePage';
+import LeagueOverview from './components/LeagueOverview';
 import './App.css';
 
 class App extends Component {
@@ -14,6 +17,7 @@ class App extends Component {
             login: false
         }
         this.handleLogin = this.handleLogin.bind(this);
+        this.handleLogout = this.handleLogout.bind(this);
     }
 
     componentDidMount() {
@@ -38,19 +42,39 @@ class App extends Component {
             login: true
         });
     }
+
+    handleLogout() {
+        localStorage.removeItem('jwt');
+
+        this.setState({
+            currentUser: {},
+            login: false
+        });
+
+        return <Redirect to='/'/>
+    }
     
     render() {
         const currentUser = this.state.currentUser;
+        const userIsLoggedIn = currentUser.user_id;
         return (
             <div className="App">
                 <header>
                     <nav>
-                        {currentUser.user_id ? "Log Out" : "Create Account"}
+                        {currentUser.user_id ? <p onClick={this.handleLogout}>Log Out</p> : "Create Account"}
                     </nav>
                 </header>
                 <Router>
+                    {userIsLoggedIn && <Redirect to={`/user/${currentUser.user_id}/home`}/> } 
                     <Switch>
-                        <Route exact path='/' render={(props) => <LoginForm {...props} handleLogin={this.handleLogin}/>}/>
+                        <Route exact path='/' render={(props) => <LandingPage
+                            {...props} handleLogin={this.handleLogin}
+                        />}/>
+                        <Route exact path='/' component={LoginForm}/>
+                        <Route exact path='/user/:user_id/home' render={(props) => <UserHomePage
+                            {...props} handleLogout={this.handleLogout} login={this.state.login} currentUser={currentUser}
+                        />}/>
+                        <Route exact path='/user/:user_id/leagues/:league_id' component={LeagueOverview}/>
                     </Switch>
                 </Router>
             </div>

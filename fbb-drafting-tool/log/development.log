@@ -34342,3 +34342,685 @@ Processing by AuthenticationController#login as HTML
 Completed 200 OK in 267ms (Views: 0.2ms | ActiveRecord: 0.4ms)
 
 
+Started POST "/auth/login" for ::1 at 2019-07-10 09:25:08 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 341ms (Views: 61.3ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 09:26:16 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 266ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 09:40:50 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 269ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 09:42:43 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 271ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 09:43:56 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 265ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 10:14:49 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 265ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 10:15:23 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 265ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 10:16:02 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 267ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 10:19:26 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 266ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 10:27:09 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 338ms (Views: 0.2ms | ActiveRecord: 55.3ms)
+
+
+Started GET "/users/undefinedleagues/" for ::1 at 2019-07-10 10:28:21 -0400
+Started GET "/users/1leagues/" for ::1 at 2019-07-10 10:28:21 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"undefinedleagues"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefinedleagues):
+  
+app/controllers/users_controller.rb:50:in `set_user'
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1leagues"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1leagues/" for ::1 at 2019-07-10 10:28:26 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1leagues"}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 9ms (Views: 0.2ms | ActiveRecord: 6.4ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 10:28:37 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 269ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1leagues/" for ::1 at 2019-07-10 10:28:37 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1leagues"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:50
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/undefined/leagues/" for ::1 at 2019-07-10 10:29:01 -0400
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 10:29:01 -0400
+Processing by LeaguesController#index as HTML
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (96.5ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+  [1m[36mLeague Load (97.4ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 139ms (Views: 22.0ms | ActiveRecord: 103.8ms)
+
+
+Completed 200 OK in 143ms (Views: 6.2ms | ActiveRecord: 123.6ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 10:29:07 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 269ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 10:29:08 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (0.8ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/undefined/leagues/" for ::1 at 2019-07-10 10:29:27 -0400
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 10:29:27 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mLeague Load (1.5ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 1.5ms)
+
+
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (198.7ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 201ms (Views: 1.9ms | ActiveRecord: 198.7ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 10:29:42 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (0.5ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 10:29:49 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 271ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 10:29:50 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (0.5ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/undefined/leagues/" for ::1 at 2019-07-10 10:31:49 -0400
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 10:31:49 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (44.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 46ms (Views: 1.3ms | ActiveRecord: 44.2ms)
+
+
+  [1m[36mLeague Load (152.6ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 155ms (Views: 1.9ms | ActiveRecord: 152.6ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 10:31:56 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (107.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 109ms (Views: 1.4ms | ActiveRecord: 107.2ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 10:32:01 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 267ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 10:32:01 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (15.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 18ms (Views: 2.3ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/users/undefined/leagues/" for ::1 at 2019-07-10 10:34:53 -0400
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 10:34:53 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mLeague Load (164.7ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 167ms (Views: 2.3ms | ActiveRecord: 164.7ms)
+
+
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (10.5ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 13ms (Views: 1.9ms | ActiveRecord: 10.5ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 10:37:22 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 265ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 10:38:15 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 266ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 10:38:15 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (0.6ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/undefined/leagues/" for ::1 at 2019-07-10 10:39:09 -0400
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 10:39:09 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (9.4ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 12ms (Views: 2.1ms | ActiveRecord: 9.4ms)
+
+
+  [1m[36mLeague Load (14.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 17ms (Views: 2.4ms | ActiveRecord: 14.1ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 10:39:13 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 267ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 10:39:16 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 268ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 10:40:20 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 267ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 10:40:20 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 268ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 10:40:21 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 267ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 10:40:22 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (32.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 35ms (Views: 2.3ms | ActiveRecord: 32.1ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 10:40:37 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 266ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 10:41:42 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (42.9ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 46ms (Views: 2.7ms | ActiveRecord: 42.9ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 10:41:49 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 266ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 10:44:55 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (30.5ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 33ms (Views: 2.0ms | ActiveRecord: 30.5ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 10:45:15 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (27.7ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 30ms (Views: 1.8ms | ActiveRecord: 27.7ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 10:45:40 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (27.7ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 30ms (Views: 1.6ms | ActiveRecord: 27.7ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 10:47:02 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (1.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-10 10:47:10 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 275ms (Views: 0.1ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 10:47:10 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (0.3ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 10:47:26 -0400
+Started GET "/users/undefined/leagues/" for ::1 at 2019-07-10 10:47:26 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (0.9ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.9ms)
+
+
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mLeague Load (14.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 18ms (Views: 3.5ms | ActiveRecord: 14.0ms)
+
+
+  [1m[36mTeam Load (3.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mLeague Load (0.5ms)[0m  [1m[34mSELECT  "leagues".* FROM "leagues" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLeague Load (0.4ms)[0m  [1m[34mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Create (56.6ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "draft_order", "league_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["team_name", "Foo Bar Fighters"], ["draft_order", 1], ["league_id", 1], ["created_at", "2019-07-10 15:27:10.816635"], ["updated_at", "2019-07-10 15:27:10.816635"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLeague Load (0.5ms)[0m  [1m[34mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Create (0.7ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "draft_order", "league_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["team_name", "Rage Against the Machine Learning"], ["draft_order", 2], ["league_id", 1], ["created_at", "2019-07-10 15:30:31.128620"], ["updated_at", "2019-07-10 15:30:31.128620"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLeague Load (0.5ms)[0m  [1m[34mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Create (0.7ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "draft_order", "league_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["team_name", "Armin Van Bootstrap"], ["draft_order", 3], ["league_id", 1], ["created_at", "2019-07-10 15:30:36.793463"], ["updated_at", "2019-07-10 15:30:36.793463"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLeague Load (0.6ms)[0m  [1m[34mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Create (0.7ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "draft_order", "league_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["team_name", "Cache Rules Everything Around Me"], ["draft_order", 4], ["league_id", 1], ["created_at", "2019-07-10 15:30:43.259331"], ["updated_at", "2019-07-10 15:30:43.259331"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLeague Load (0.5ms)[0m  [1m[34mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Create (0.8ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "draft_order", "league_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["team_name", "JSON Derulo"], ["draft_order", 5], ["league_id", 1], ["created_at", "2019-07-10 15:30:52.921029"], ["updated_at", "2019-07-10 15:30:52.921029"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLeague Load (0.3ms)[0m  [1m[34mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Create (0.5ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "draft_order", "league_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["team_name", "LinkedIn Park"], ["draft_order", 6], ["league_id", 1], ["created_at", "2019-07-10 15:31:01.871904"], ["updated_at", "2019-07-10 15:31:01.871904"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLeague Load (0.4ms)[0m  [1m[34mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Create (0.6ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "draft_order", "league_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["team_name", "Panic at the Distro"], ["draft_order", 7], ["league_id", 1], ["created_at", "2019-07-10 15:31:08.095231"], ["updated_at", "2019-07-10 15:31:08.095231"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLeague Load (0.3ms)[0m  [1m[34mSELECT  "leagues".* FROM "leagues" WHERE "leagues"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTeam Create (0.6ms)[0m  [1m[32mINSERT INTO "teams" ("team_name", "draft_order", "league_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["team_name", "Slice Girls"], ["draft_order", 8], ["league_id", 1], ["created_at", "2019-07-10 15:31:14.036316"], ["updated_at", "2019-07-10 15:31:14.036316"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/users/1/leagues/1/teams" for ::1 at 2019-07-10 11:36:40 -0400
+Processing by TeamsController#index as */*
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "user_id"=>"1", "league_id"=>"1", "team"=>{}}
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:8
+Completed 200 OK in 86ms (Views: 80.4ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 11:38:04 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (46.5ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 49ms (Views: 2.5ms | ActiveRecord: 46.5ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-10 11:49:56 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (0.9ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-11 09:01:04 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (15.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 22ms (Views: 5.1ms | ActiveRecord: 15.1ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-11 09:01:16 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (43.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 328ms (Views: 0.5ms | ActiveRecord: 43.9ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-11 09:01:17 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (0.8ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/undefined/leagues/" for ::1 at 2019-07-11 09:03:06 -0400
+Started GET "/users/1/leagues/" for ::1 at 2019-07-11 09:03:06 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"undefined"}
+  [1m[36mLeague Load (17.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 20ms (Views: 2.4ms | ActiveRecord: 17.1ms)
+
+
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (1.4ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-11 09:03:12 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 269ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-11 09:03:12 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (0.3ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/leagues/undefined/teams" for ::1 at 2019-07-11 09:03:13 -0400
+Processing by TeamsController#index as HTML
+  Parameters: {"user_id"=>"1", "league_id"=>"undefined"}
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:8
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1/leagues/undefined/teams" for ::1 at 2019-07-11 09:03:45 -0400
+Started GET "/users/1/leagues/" for ::1 at 2019-07-11 09:03:45 -0400
+Processing by TeamsController#index as HTML
+  Parameters: {"user_id"=>"1", "league_id"=>"undefined"}
+  [1m[36mTeam Load (73.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:8
+Completed 200 OK in 76ms (Views: 2.1ms | ActiveRecord: 73.7ms)
+
+
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (23.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 27ms (Views: 3.1ms | ActiveRecord: 23.1ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-11 09:03:49 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 267ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-11 09:03:49 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (0.5ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/leagues/undefined/teams" for ::1 at 2019-07-11 09:03:50 -0400
+Processing by TeamsController#index as HTML
+  Parameters: {"user_id"=>"1", "league_id"=>"undefined"}
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:8
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/leagues/undefined/teams" for ::1 at 2019-07-11 09:04:01 -0400
+Started GET "/users/1/leagues/" for ::1 at 2019-07-11 09:04:01 -0400
+Processing by TeamsController#index as HTML
+  Parameters: {"user_id"=>"1", "league_id"=>"undefined"}
+  [1m[36mTeam Load (78.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:8
+Completed 200 OK in 81ms (Views: 2.1ms | ActiveRecord: 78.3ms)
+
+
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (19.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 22ms (Views: 2.2ms | ActiveRecord: 19.1ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-11 09:04:06 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 269ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-11 09:04:06 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (1.5ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/1/leagues/1/teams" for ::1 at 2019-07-11 09:04:08 -0400
+Processing by TeamsController#index as HTML
+  Parameters: {"user_id"=>"1", "league_id"=>"1"}
+  [1m[36mTeam Load (11.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:8
+Completed 200 OK in 17ms (Views: 5.5ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/users/1/leagues/1/teams" for ::1 at 2019-07-11 09:04:25 -0400
+Started GET "/users/1/leagues/" for ::1 at 2019-07-11 09:04:25 -0400
+Processing by TeamsController#index as HTML
+  Parameters: {"user_id"=>"1", "league_id"=>"1"}
+  [1m[36mTeam Load (39.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+Processing by LeaguesController#index as HTML
+  ↳ app/controllers/teams_controller.rb:8
+Completed 200 OK in 45ms (Views: 5.5ms | ActiveRecord: 39.2ms)
+
+
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (162.5ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 165ms (Views: 2.0ms | ActiveRecord: 162.5ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-11 09:04:29 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 401 Unauthorized in 266ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-11 09:04:35 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"email"=>"admin@fakemail.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"admin@fakemail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@fakemail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16
+Completed 200 OK in 267ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/leagues/" for ::1 at 2019-07-11 09:04:35 -0400
+Processing by LeaguesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mLeague Load (11.4ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8
+Completed 200 OK in 14ms (Views: 2.3ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/users/1/leagues/1/teams" for ::1 at 2019-07-11 09:04:36 -0400
+Processing by TeamsController#index as HTML
+  Parameters: {"user_id"=>"1", "league_id"=>"1"}
+  [1m[36mTeam Load (1.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:8
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.3ms)
+
+
