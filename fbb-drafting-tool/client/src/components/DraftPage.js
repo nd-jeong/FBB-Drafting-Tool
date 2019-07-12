@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import ReactTable from 'react-table';
 import 'react-table/react-table.css';
+import Table from 'react-bootstrap/Table';
 
 
 class DraftPage extends Component {
@@ -9,38 +10,22 @@ class DraftPage extends Component {
         super();
 
         this.state = {
-            available_players: [],
-            selected_player: [],
+            availablePlayers: [],
+            selectedPlayer: [],
             selected: null,
-            drafted_player: false
+            deletedPlayer: [],
+            refreshPlayerList: false,
+            teamPlayers: [],
+            availablePlayersData: []
         }
         this.draftPlayer = this.draftPlayer.bind(this);
     }
 
     async componentDidMount() {
-        const available_players = await axios.get('http://localhost:3000/available_players');
+        const availablePlayers = await axios.get('http://localhost:3000/available_players');
+        const teamPlayers = await axios.get(`http://localhost:3000/users/${this.props.match.params.user_id}/leagues/${this.props.match.params.league_id}/teams/${this.props.match.params.user_id}/team_players`);
 
-        this.setState({
-            available_players: available_players.data
-        });
-    }
-
-    async draftPlayer() {
-        const player = await axios.get(`http://localhost:3000/available_players/${this.state.selected_player.id}`);
-
-        const playerInfo = player.data;
-
-        await axios.post(`http://localhost:3000/users/${this.props.match.params.user_id}/leagues/${this.props.match.params.league_id}/teams/${this.props.match.params.team_id}/team_players`, playerInfo);
-
-        await axios.delete(`http://localhost:3000/available_players/${playerInfo.id}`);
-
-        this.setState({
-            drafted_player: true
-        })
-    }
-
-    render() {
-        const availablePlayers = this.state.available_players.map(player => {
+        const availablePlayersData = availablePlayers.data.map(player => {
             return(
                 {
                     id: `${player.id}`,
@@ -55,11 +40,79 @@ class DraftPage extends Component {
                     steals: `${player.steals}`,
                     blocks: `${player.blocks}`,
                     turnovers: `${player.turnovers}`
-                }     
+                }   
             )
+        })
+        this.setState({
+            availablePlayers: availablePlayersData,
+            teamPlayers: teamPlayers.data
+        });
+    }
+
+    async componentDidUpdate() {
+        if (this.state.refreshPlayerList) {
+            // const playerList = this.state.availablePlayers;
+            // const updatedPlayerList = playerList.filter(player => player.id !== this.state.deletedPlayer.id);
+            const updatedAvailablePlayersList = await axios.get('http://localhost:3000/available_players');
+            const updatedAvailablePlayersListData = updatedAvailablePlayersList.data.map(player => {
+                return(
+                    {
+                        id: `${player.id}`,
+                        name: `${player.first_name} ${player.last_name}`,
+                        position: `${player.position}`,
+                        field_goal_pct: `${player.field_goal_pct}`,
+                        free_throw_pct: `${player.free_throw_pct}`,
+                        threes: (`${player.threes}`/`${player.games_played}`).toFixed(1),
+                        points: `${player.points}`,
+                        rebounds: `${player.rebounds}`,
+                        assists: `${player.assists}`,
+                        steals: `${player.steals}`,
+                        blocks: `${player.blocks}`,
+                        turnovers: `${player.turnovers}`
+                    }   
+                )
+            })
+
+            const updatedTeamPlayers = await axios.get(`http://localhost:3000/users/${this.props.match.params.user_id}/leagues/${this.props.match.params.league_id}/teams/${this.props.match.params.user_id}/team_players`);
+
+            this.setState({
+                availablePlayers: updatedAvailablePlayersListData,
+                deletedPlayer: [],
+                refreshPlayerList: false,
+                teamPlayers: updatedTeamPlayers.data
+            });
+        }
+    }
+
+    async draftPlayer() {
+        const player = await axios.get(`http://localhost:3000/available_players/${this.state.selectedPlayer.id}`);
+
+        const playerInfo = player.data;
+
+        await axios.post(`http://localhost:3000/users/${this.props.match.params.user_id}/leagues/${this.props.match.params.league_id}/teams/${this.props.match.params.team_id}/team_players`, playerInfo);
+
+        await axios.delete(`http://localhost:3000/available_players/${playerInfo.id}`);
+
+        this.setState({
+            deletedPlayer: playerInfo,
+            refreshPlayerList: true
         });
 
-        const columns = [{
+        this.forceUpdate();
+    }
+
+    render() {
+        const teamPlayers = this.state.teamPlayers.map(player => {
+            if (player.team_id == this.props.match.params.team_id) {
+                return(
+                    <tr key={player.id}>
+                        <td>{player.first_name} {player.last_name}</td>
+                    </tr>
+                );
+            }
+        })
+
+        const availablePlayersColumn = [{
             Header: 'ID',
             accessor: 'id',
             width: 50 
@@ -113,8 +166,8 @@ class DraftPage extends Component {
             <div>
                 <ReactTable
                     className='-striped -highlight'
-                    data={availablePlayers}
-                    columns={columns}
+                    data={this.state.availablePlayers}
+                    columns={availablePlayersColumn}
                     style={{
                         width: '1000px'
                     }}
@@ -123,7 +176,7 @@ class DraftPage extends Component {
                             return {
                                 onClick: (e) => {
                                     this.setState({
-                                        selected_player: rowInfo.original,
+                                        selectedPlayer: rowInfo.original,
                                         selected: rowInfo.index
                                     })
                                 }, style: {
@@ -138,6 +191,16 @@ class DraftPage extends Component {
                     }}
                 />
                 <button onClick={this.draftPlayer}>Draft Player</button>
+                <Table striped bordered hover size="sm">
+                    <thead>
+                        <tr>
+                        <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {teamPlayers}
+                    </tbody>
+                </Table>
             </div>
         )
     }
