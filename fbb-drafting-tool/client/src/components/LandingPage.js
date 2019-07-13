@@ -5,7 +5,6 @@ class LandingPage extends Component {
     render() {
         return(
             <div>
-                Landing Page
                 <LoginForm
                     handleLogin={this.props.handleLogin}
                 />

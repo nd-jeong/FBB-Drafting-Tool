@@ -1,3 +1,17 @@
+User.create(email: "admin@fakemail.com", password: "admin123")
+
+League.create(league_name: "Git Push Live", num_teams: 8, num_players: 13, pg_num: 1, g_num: 1, sg_num: 1, sf_num: 1, f_num: 1, pf_num: 1, c_num: 2, util_num: 2, bench_num:3, user_id: 1)
+
+Team.create(team_name: "Foo Bar Fighters", draft_order: 1, league_id: 1)
+Team.create(team_name: "Rage Against the Machine Learning", draft_order: 2, league_id: 1)
+Team.create(team_name: "Armin Van Bootstrap", draft_order: 3, league_id: 1)
+Team.create(team_name: "Cache Rules Everything Around Me", draft_order: 4, league_id: 1)
+Team.create(team_name: "JSON Derulo", draft_order: 5, league_id: 1)
+Team.create(team_name: "LinkedIn Park", draft_order: 6, league_id: 1)
+Team.create(team_name: "Panic at the Distro", draft_order: 7, league_id: 1)
+Team.create(team_name: "Slice Girls", draft_order: 8, league_id: 1)
+
+
 def get_player_data(personId)
     require 'uri'
     require 'net/http'

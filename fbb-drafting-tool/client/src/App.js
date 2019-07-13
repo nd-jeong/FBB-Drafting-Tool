@@ -64,8 +64,9 @@ class App extends Component {
         return (
             <div className="App">
                 <header>
-                    <nav>
-                        {currentUser.user_id ? <p onClick={this.handleLogout}>Log Out</p> : "Create Account"}
+                    <h2>FBB-Drafting-Tool</h2>
+                    <nav className='nav-bar'>
+                        {currentUser.user_id ? <p onClick={this.handleLogout}>Log Out</p> : null}
                     </nav>
                 </header>
                 <Router>
@@ -78,9 +79,15 @@ class App extends Component {
                         <Route exact path='/user/:user_id/home' render={(props) => <UserHomePage
                             {...props} handleLogout={this.handleLogout} login={this.state.login} currentUser={currentUser}
                         />}/>
-                        <Route exact path='/user/:user_id/leagues/:league_id' component={LeagueOverview}/>
-                        <Route exact path='/user/:user_id/leagues/:league_id/team/:team_id' component={TeamOverview}/>
-                        <Route exact path='/user/:user_id/leagues/:league_id/team/:team_id/draft' component={DraftPage}/>
+                        <Route exact path='/user/:user_id/leagues/:league_id' render={(props) => <LeagueOverview 
+                            {...props} handleLogout={this.handleLogout} login={this.state.login} currentUser={currentUser}
+                        />}/>
+                        <Route exact path='/user/:user_id/leagues/:league_id/team/:team_id' render={(props) => <TeamOverview
+                            {...props} handleLogout={this.handleLogout} login={this.state.login} currentUser={currentUser}
+                        />}/>
+                        <Route exact path='/user/:user_id/leagues/:league_id/team/:team_id/draft' render={(props) => <DraftPage
+                            {...props} handleLogout={this.handleLogout} login={this.state.login} currentUser={currentUser}
+                        />}/>
                     </Switch>
                 </Router>
             </div>

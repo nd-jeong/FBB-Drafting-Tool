@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import {Redirect} from 'react-router-dom';
 import ReactTable from 'react-table';
 import 'react-table/react-table.css';
 import Table from 'react-bootstrap/Table';
+import Chart from 'react-google-charts';
+import './styles/DraftPage.css'
 
 
 class DraftPage extends Component {
@@ -42,7 +45,8 @@ class DraftPage extends Component {
                     turnovers: `${player.turnovers}`
                 }   
             )
-        })
+        });
+
         this.setState({
             availablePlayers: availablePlayersData,
             teamPlayers: teamPlayers.data
@@ -71,7 +75,7 @@ class DraftPage extends Component {
                         turnovers: `${player.turnovers}`
                     }   
                 )
-            })
+            });
 
             const updatedTeamPlayers = await axios.get(`http://localhost:3000/users/${this.props.match.params.user_id}/leagues/${this.props.match.params.league_id}/teams/${this.props.match.params.user_id}/team_players`);
 
@@ -97,7 +101,6 @@ class DraftPage extends Component {
             deletedPlayer: playerInfo,
             refreshPlayerList: true
         });
-
         this.forceUpdate();
     }
 
@@ -160,10 +163,11 @@ class DraftPage extends Component {
             Header: 'Turnovers',
             accessor: 'turnovers',
             width: 90  
-        }]
+        }];
 
         return(
-            <div>
+            <div className='draft-window'>
+                {this.props.login ? null : <Redirect to='/'/>}
                 <ReactTable
                     className='-striped -highlight'
                     data={this.state.availablePlayers}
@@ -190,17 +194,19 @@ class DraftPage extends Component {
                         
                     }}
                 />
-                <button onClick={this.draftPlayer}>Draft Player</button>
-                <Table striped bordered hover size="sm">
-                    <thead>
-                        <tr>
-                        <th>Name</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {teamPlayers}
-                    </tbody>
-                </Table>
+                <div className='draft-controls'>
+                    <button onClick={this.draftPlayer} className='draft-player'>Draft Player</button>
+                    <Table striped bordered hover size="sm">
+                        <thead>
+                            <tr>
+                            <th>Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {teamPlayers}
+                        </tbody>
+                    </Table>
+                </div>
             </div>
         )
     }

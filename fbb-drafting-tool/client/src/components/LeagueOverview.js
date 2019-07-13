@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 
 class LeagueOverview extends Component {
     constructor() {
@@ -29,6 +29,7 @@ class LeagueOverview extends Component {
         })
         return(
             <div>
+                {this.props.login ? null : <Redirect to='/'/>}
                 League Overview
                 {team}
             </div>

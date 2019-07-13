@@ -1,0 +1,8 @@
+.draft-player {
+    padding: 15px;
+}
+
+.draft-window {
+    display: flex;
+    flex-direction: row;
+}

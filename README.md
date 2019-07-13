@@ -85,11 +85,11 @@ https://www.lucidchart.com/invitations/accept/3ee24fc7-d76c-49ac-844e-82e7be70da
 | Authentication | H | 4hrs| 4hrs |
 | Create landing page | H | 3hrs|  |
 | Create new user form component | H | 3hrs|  |
-| Create user's league component | H | 3hrs|  |
+| Create user's league component | H | 3hrs| 2hrs |
 | Create league overview component | H | 8hrs|  |
 | Create new league form component | H | 3hrs|  |
-| Create team overview component | H | 6hrs|  |
-| Create drafting page component | H | 12hrs|  |
+| Create team overview component | H | 6hrs| 8hrs |
+| Create drafting page component | H | 12hrs| 14hrs |
 | Total | H | 56hrs|  | 
 
 ## Helper Functions
