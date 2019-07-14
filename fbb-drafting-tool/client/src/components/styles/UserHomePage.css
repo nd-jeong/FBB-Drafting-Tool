@@ -4,13 +4,15 @@
 }
 
 .league-links {
-    border: 1px solid black;
-    padding: 20px;
+    border: 2px solid black;
+    padding: 20px 50px;
     margin: 15px auto;
     transition-duration: 0.5s;
     width: 20%;
     text-decoration: none;
     color: black;
+    border-radius: 5px;
+    font-weight: 700;
 }
 
 .league-links:hover {
