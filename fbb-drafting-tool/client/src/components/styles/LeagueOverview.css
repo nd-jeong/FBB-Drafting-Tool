@@ -1,0 +1,21 @@
+.team-link {
+    border: 1px solid black;
+    margin: 10px 0;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    transition-duration: 0.5s;
+    border-radius: 15px;
+}
+
+.team-link:hover {
+    color: white;
+    background: black;
+}
+
+.team-link-container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 0 auto;
+}

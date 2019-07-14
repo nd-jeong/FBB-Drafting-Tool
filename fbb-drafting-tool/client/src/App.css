@@ -1,10 +1,33 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    /* background: #5E5D5E; */
+    color: black;
+    background: url('../src/images/background.jpg') cover center;
+}
+
 header {
     display: flex;
     border-bottom: 1px solid black;
+    justify-content: space-between;
+    align-content: center;
+    color: white;
+    background: black;
+}
+
+header h2 {
+    margin-left: 20px;
 }
 
 .App {
   text-align: center;
+}
+
+.log-out-user {
+    margin-right: 20px;
+}
+
+.log-out-user:hover {
+    color: yellow;
 }
 
 .nav-bar {

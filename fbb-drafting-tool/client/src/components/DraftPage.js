@@ -4,7 +4,6 @@ import {Redirect} from 'react-router-dom';
 import ReactTable from 'react-table';
 import 'react-table/react-table.css';
 import Table from 'react-bootstrap/Table';
-import Chart from 'react-google-charts';
 import './styles/DraftPage.css'
 
 
@@ -22,6 +21,7 @@ class DraftPage extends Component {
             availablePlayersData: []
         }
         this.draftPlayer = this.draftPlayer.bind(this);
+        this.goBack = this.goBack.bind(this);
     }
 
     async componentDidMount() {
@@ -104,6 +104,10 @@ class DraftPage extends Component {
         this.forceUpdate();
     }
 
+    goBack() {
+        this.props.history.goBack();
+    }
+
     render() {
         const teamPlayers = this.state.teamPlayers.map(player => {
             if (player.team_id == this.props.match.params.team_id) {
@@ -173,7 +177,8 @@ class DraftPage extends Component {
                     data={this.state.availablePlayers}
                     columns={availablePlayersColumn}
                     style={{
-                        width: '1000px'
+                        width: '1000px',
+                        height: '800px'
                     }}
                     getTrProps={(state, rowInfo) => {
                         if (rowInfo && rowInfo.row) {
@@ -196,16 +201,17 @@ class DraftPage extends Component {
                 />
                 <div className='draft-controls'>
                     <button onClick={this.draftPlayer} className='draft-player'>Draft Player</button>
-                    <Table striped bordered hover size="sm">
+                    <Table size="sm" className='drafted-players striped bordered hover'>
                         <thead>
                             <tr>
-                            <th>Name</th>
+                                <th>Drafted Players</th>
                             </tr>
                         </thead>
                         <tbody>
                             {teamPlayers}
                         </tbody>
                     </Table>
+                    <button onClick={this.goBack} className='go-back-btn'>Back to Team</button>
                 </div>
             </div>
         )

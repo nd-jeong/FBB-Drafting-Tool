@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import {Link, Redirect} from 'react-router-dom';
+import './styles/LeagueOverview.css';
 
 class LeagueOverview extends Component {
     constructor() {
@@ -22,16 +23,20 @@ class LeagueOverview extends Component {
     render() {
         const team = this.state.teams.map(team => {
             return(
-                <div key={team.id}>
-                    <Link to={`/user/${this.props.match.params.user_id}/leagues/${this.props.match.params.league_id}/team/${team.id}`}>{team.team_name}</Link>
-                </div>
+                <Link 
+                    to={`/user/${this.props.match.params.user_id}/leagues/${this.props.match.params.league_id}/team/${team.id}`} 
+                    key={team.id} 
+                    className='team-link'>{team.team_name}
+                </Link>
             )
         })
         return(
             <div>
                 {this.props.login ? null : <Redirect to='/'/>}
-                League Overview
-                {team}
+                <h2>League Overview</h2>
+                <div className='team-link-container'>
+                    {team}
+                </div>
             </div>
         )
     }

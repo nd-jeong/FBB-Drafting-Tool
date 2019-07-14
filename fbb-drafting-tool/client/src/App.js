@@ -66,7 +66,7 @@ class App extends Component {
                 <header>
                     <h2>FBB-Drafting-Tool</h2>
                     <nav className='nav-bar'>
-                        {currentUser.user_id ? <p onClick={this.handleLogout}>Log Out</p> : null}
+                        {currentUser.user_id ? <h4 onClick={this.handleLogout} className='log-out-user'>Log Out</h4> : null}
                     </nav>
                 </header>
                 <Router>

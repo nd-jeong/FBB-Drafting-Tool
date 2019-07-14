@@ -3,4 +3,15 @@ form {
     width: 15%;
     margin: 0 auto;
     padding: 15px;
+    background: white;
+    color: black;
+}
+
+input:focus {
+    border: blue;
+}
+
+.login-submit-btn {
+    margin: 10px 0;
+    padding: 5px;
 }

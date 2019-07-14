@@ -1,0 +1,24 @@
+.league-link-container {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.league-links {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 15px auto;
+    transition-duration: 0.5s;
+    width: 20%;
+    text-decoration: none;
+    color: black;
+}
+
+.league-links:hover {
+    background: black;
+    color: white;
+}
+
+.league-title {
+    margin-bottom: 50px;
+}
+

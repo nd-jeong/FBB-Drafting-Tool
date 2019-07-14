@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import {Link, Redirect} from 'react-router-dom';
 import Chart from 'react-google-charts';
+import './styles/TeamOverview.css';
 
 class TeamOverview extends Component {
     _isMounted = false;
@@ -18,18 +19,26 @@ class TeamOverview extends Component {
             assists: 0,
             steals: 0,
             blocks: 0,
-            turnovers: 0
+            turnovers: 0,
+            players_on_team: false,
+            currentTeam: [],
+            currentTeamPlayers: []
         }
         this.calculateTeamAverages = this.calculateTeamAverages.bind(this);
+        this.goBack = this.goBack.bind(this);
     }
 
     async componentDidMount() {
         this._isMounted = true;
+
+        const currentTeamInfo = await axios.get(`http://localhost:3000/users/${this.props.match.params.user_id}/leagues/${this.props.match.params.league_id}/teams/${this.props.match.params.team_id}`);
+
         await axios.get(`http://localhost:3000/users/${this.props.match.params.user_id}/leagues/${this.props.match.params.league_id}/teams/${this.props.match.params.team_id}/team_players`)
             .then(res => {
                 if (this._isMounted) {
                     this.setState({
-                        players: res.data
+                        players: res.data,
+                        currentTeam: currentTeamInfo.data
                     });
                 }
             });
@@ -37,6 +46,10 @@ class TeamOverview extends Component {
 
     componentWillUnmount() {
         this._isMounted = false;
+    }
+
+    goBack() {
+        this.props.history.goBack();
     }
 
     calculateTeamAverages() {
@@ -49,6 +62,7 @@ class TeamOverview extends Component {
         const steals = [];
         const blocks = [];
         const turnovers = [];
+        const currentTeamPlayers = [];
 
         this.state.players.map(player => {
             if (player.team_id == this.props.match.params.team_id) {
@@ -60,13 +74,17 @@ class TeamOverview extends Component {
                 steals.push(parseFloat(player.steals))
                 blocks.push(parseFloat(player.blocks))
                 turnovers.push(parseFloat(player.turnovers))
-                console.log(player.threes)
+                currentTeamPlayers.push(player)
                 if (player.threes == NaN || player.threes === NaN || player.threes == null) {
                     threes.push(0)
                 } else {
                     threes.push(parseFloat(player.threes))
                 }
+                this.setState({
+                    currentTeamPlayers
+                })
             }
+            console.log(fieldGoal)
         })
         
         let totalFG = 0;
@@ -78,20 +96,21 @@ class TeamOverview extends Component {
         let totalSteals = 0;
         let totalBlocks = 0;
         let totalTurnovers = 0;
-        const numPlayers = this.state.players.length;
+        const numPlayers = this.state.currentTeamPlayers.length;
 
         for (let i = 0; i < numPlayers; i++) {
             totalFG += fieldGoal[i];
+            console.log(totalFG)
             totalFT += freeThrow[i];
             totalThrees += threes[i];
             totalPoints += points[i];
-            totalRebounds += rebounds[i];
+            totalRebounds += rebounds[i];   
             totalAssists += assists[i];
             totalSteals += steals[i];
             totalBlocks += blocks[i];
             totalTurnovers += turnovers[i];
         }
-        
+
         const averageFG = (totalFG / numPlayers).toFixed(1);
         const averageFT = (totalFT / numPlayers).toFixed(1);
         const averageThrees = (((totalThrees)/82) / numPlayers).toFixed(1);
@@ -102,8 +121,6 @@ class TeamOverview extends Component {
         const averageBlocks = (totalBlocks / numPlayers).toFixed(1);
         const averageTurnovers = (totalTurnovers / numPlayers).toFixed(1);
 
-        console.log(averageThrees);
-
         this.setState({
             field_goal_pct: averageFG,
             free_throw_pct: averageFT,
@@ -113,7 +130,8 @@ class TeamOverview extends Component {
             assists: averageAssists,
             steals: averageSteals,
             blocks: averageBlocks,
-            turnovers: averageTurnovers
+            turnovers: averageTurnovers,
+            players_on_team: true
         })
     }
 
@@ -122,54 +140,73 @@ class TeamOverview extends Component {
             if (player.team_id == this.props.match.params.team_id) {
                 return(
                     <div key={player.id}>
-                        {player.first_name} {player.last_name}
+                        <ul>
+                            <li>{player.first_name} {player.last_name}</li>
+                        </ul>
                     </div>
                 );
             }
         });
 
         return(
-            <div>
+            <div className='team-overview-container'>
                 {this.props.login ? null : <Redirect to='/'/>}
-                {players}
-                <Link to={`/user/${this.props.match.params.user_id}/leagues/${this.props.match.params.league_id}/team/${this.props.match.params.team_id}/draft`}>Draft Players</Link>
-                <button onClick={this.calculateTeamAverages}>Get Team Averages</button>
-                {/* https://react-google-charts.com/bar-chart */}
-                <Chart
-                    width={'400px'}
-                    height={'300px'}
-                    chartType="BarChart"
-                    loader={<div>Loading Chart</div>}
-                    data={[
-                        [
-                        'Category',
-                        'Average',
-                        { role: 'style' },
-                        {
-                            sourceColumn: 0,
-                            role: 'annotation',
-                            type: 'string',
-                            calc: 'stringify',
-                        },
-                        ],
-                        ['FG%', parseFloat(`${this.state.field_goal_pct}`), '#b87333', null],
-                        ['FT%', parseFloat(`${this.state.free_throw_pct}`), 'silver', null],
-                        ['3PTM', parseFloat(`${this.state.threes}`), 'gold', null],
-                        ['Points', parseFloat(`${this.state.points}`), 'color: #e5e4e2', null],
-                        ['Rebounds', parseFloat(`${this.state.rebounds}`), 'color: #e5e4e2', null],
-                        ['Assists', parseFloat(`${this.state.assists}`), 'color: #e5e4e2', null],
-                        ['Steals', parseFloat(`${this.state.steals}`), 'color: #e5e4e2', null],
-                        ['Blocks', parseFloat(`${this.state.blocks}`), 'color: #e5e4e2', null],
-                        ['Turnovers', parseFloat(`${this.state.turnovers}`), 'color: #e5e4e2', null],
-                    ]}
-                    options={{
-                        title: 'Category Averages',
-                        width: 600,
-                        height: 400,
-                        bar: { groupWidth: '95%' },
-                        legend: { position: 'none' },
-                    }}
-                />
+                <div className='team-controls-container'>
+                    <div className='team-players-container'>
+                        <h3>{this.state.currentTeam.team_name}</h3>
+                        {players}
+                    </div>
+                    <div className='btn-conatiner'>
+                        <button className='open-draft-btn'>   
+                            <Link to={`/user/${this.props.match.params.user_id}/leagues/${this.props.match.params.league_id}/team/${this.props.match.params.team_id}/draft`}>  Draft Players  </Link>
+                        </button>
+                    </div>
+                    <div className='btn-conatiner'>
+                        <button onClick={this.calculateTeamAverages} className='team-average-chart-btn'>Get Team Averages</button>
+                    </div>
+                    <div className='btn-conatiner'>
+                        <button onClick={this.goBack} className='go-back-btn'>Back to League</button>
+                    </div>
+                </div>
+                {this.state.players_on_team ? 
+                    <div>
+                    {/* https://react-google-charts.com/bar-chart */}
+                    <Chart
+                        width={'800px'}
+                        height={'500px'}
+                        chartType="BarChart"
+                        loader={<div>Loading Chart</div>}
+                        data={[
+                            [
+                            'Category',
+                            'Average',
+                            { role: 'style' },
+                            {
+                                sourceColumn: 0,
+                                role: 'annotation',
+                                type: 'string',
+                                calc: 'stringify',
+                            },
+                            ],
+                            ['FG%', parseFloat(`${this.state.field_goal_pct}`), '#b87333', null],
+                            ['FT%', parseFloat(`${this.state.free_throw_pct}`), 'silver', null],
+                            ['3PTM', parseFloat(`${this.state.threes}`), 'gold', null],
+                            ['Points', parseFloat(`${this.state.points}`), 'color: #e5e4e2', null],
+                            ['Rebounds', parseFloat(`${this.state.rebounds}`), 'color: #e5e4e2', null],
+                            ['Assists', parseFloat(`${this.state.assists}`), 'color: #e5e4e2', null],
+                            ['Steals', parseFloat(`${this.state.steals}`), 'color: #e5e4e2', null],
+                            ['Blocks', parseFloat(`${this.state.blocks}`), 'color: #e5e4e2', null],
+                            ['Turnovers', parseFloat(`${this.state.turnovers}`), 'color: #e5e4e2', null],
+                        ]}
+                        options={{
+                            title: 'Category Averages',
+                            width: 800,
+                            height: 600,
+                            bar: { groupWidth: '95%' },
+                            legend: { position: 'none' },
+                        }}
+                    />
+                </div> : null}
             </div>
         )
     }

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom';
+import './styles/UserHomePage.css';
 
 class UserHomePage extends Component {
     _isMounted = false;
@@ -34,16 +35,18 @@ class UserHomePage extends Component {
     render() {
         const league = this.state.leagues.map(league => {
             return(
-                <div key={league.id}>
-                    <Link to={`/user/${this.props.match.params.user_id}/leagues/${league.id}`}>{league.league_name}</Link>
-                </div>
+                <Link 
+                    to={`/user/${this.props.match.params.user_id}/leagues/${league.id}`} 
+                    key={league.id} 
+                    className='league-links'>{league.league_name}
+                </Link>
             )
         });
 
         return(
-            <div>
+            <div className='league-link-container'>
                 {this.props.login ? null : <Redirect to='/'/>}
-                Home Page
+                <h2 className='league-title'>Your Leagues:</h2>
                 {league}
             </div>
         )
