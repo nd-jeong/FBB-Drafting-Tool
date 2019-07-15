@@ -113,7 +113,7 @@ class DraftPage extends Component {
             if (player.team_id == this.props.match.params.team_id) {
                 return(
                     <tr key={player.id}>
-                        <td>{player.first_name} {player.last_name}</td>
+                        <td onClick={this.selectPlayer}>{player.first_name} {player.last_name}</td>
                     </tr>
                 );
             }

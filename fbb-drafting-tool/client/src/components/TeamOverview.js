@@ -141,7 +141,7 @@ class TeamOverview extends Component {
                 return(
                     <div key={player.id}>
                         <ul>
-                            <li>{player.first_name} {player.last_name}</li>
+                            <li>{player.first_name} {player.last_name}</li> 
                         </ul>
                     </div>
                 );
@@ -188,15 +188,15 @@ class TeamOverview extends Component {
                                 calc: 'stringify',
                             },
                             ],
-                            ['FG%', parseFloat(`${this.state.field_goal_pct}`), '#b87333', null],
-                            ['FT%', parseFloat(`${this.state.free_throw_pct}`), 'silver', null],
-                            ['3PTM', parseFloat(`${this.state.threes}`), 'gold', null],
-                            ['Points', parseFloat(`${this.state.points}`), 'color: #e5e4e2', null],
-                            ['Rebounds', parseFloat(`${this.state.rebounds}`), 'color: #e5e4e2', null],
-                            ['Assists', parseFloat(`${this.state.assists}`), 'color: #e5e4e2', null],
-                            ['Steals', parseFloat(`${this.state.steals}`), 'color: #e5e4e2', null],
-                            ['Blocks', parseFloat(`${this.state.blocks}`), 'color: #e5e4e2', null],
-                            ['Turnovers', parseFloat(`${this.state.turnovers}`), 'color: #e5e4e2', null],
+                            ['FG%', parseFloat(`${this.state.field_goal_pct}`), 'red', null],
+                            ['FT%', parseFloat(`${this.state.free_throw_pct}`), 'blue', null],
+                            ['3PTM', parseFloat(`${this.state.threes}`), 'green', null],
+                            ['Points', parseFloat(`${this.state.points}`), 'orange', null],
+                            ['Rebounds', parseFloat(`${this.state.rebounds}`), 'yellow', null],
+                            ['Assists', parseFloat(`${this.state.assists}`), 'purple', null],
+                            ['Steals', parseFloat(`${this.state.steals}`), 'black', null],
+                            ['Blocks', parseFloat(`${this.state.blocks}`), 'gold', null],
+                            ['Turnovers', parseFloat(`${this.state.turnovers}`), 'silver', null],
                         ]}
                         options={{
                             title: 'Category Averages',
