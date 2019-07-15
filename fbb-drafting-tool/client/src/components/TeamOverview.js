@@ -77,7 +77,7 @@ class TeamOverview extends Component {
                 blocks.push(parseFloat(player.blocks))
                 turnovers.push(parseFloat(player.turnovers))
                 currentTeamPlayers.push(player)
-                if (player.threes == NaN || player.threes === NaN || player.threes == null) {
+                if (isNaN(player.threes) || player.threes == NaN || player.threes == null) {
                     threes.push(0)
                 } else {
                     threes.push(parseFloat(player.threes))
@@ -86,7 +86,6 @@ class TeamOverview extends Component {
                     currentTeamPlayers
                 })
             }
-            console.log(fieldGoal)
         })
         
         let totalFG = 0;

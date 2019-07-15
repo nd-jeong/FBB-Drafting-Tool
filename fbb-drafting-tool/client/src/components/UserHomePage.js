@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter as Link, Redirect } from 'react-router-dom';
 import './styles/UserHomePage.css';
 
 class UserHomePage extends Component {
