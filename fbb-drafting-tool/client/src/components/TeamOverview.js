@@ -52,6 +52,8 @@ class TeamOverview extends Component {
         this.props.history.goBack();
     }
 
+    // Pushes player's stats into arrays and calculates the averages
+
     calculateTeamAverages() {
         const fieldGoal = [];
         const freeThrow = [];

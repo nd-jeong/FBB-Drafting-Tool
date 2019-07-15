@@ -6,11 +6,11 @@
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Day 1| Create Back-end / Authentication / API | Incomplete
-|Day 2| Finish Back-end / API | Incomplete
-|Day 3| Create front-end components | Incomplete
-|Day 4| Complete front-end components | Incomplete
-|Day 5| CSS + MVP  | Incomplete
+|Day 1| Create Back-end / Authentication / API | Complete
+|Day 2| Finish Back-end / API | Complete
+|Day 3| Create front-end components | Complete
+|Day 4| Complete front-end components | Complete
+|Day 5| CSS + MVP  | Complete
 |Day 6| CSS + Post MVP | Incomplete
 |Day 7| Post MVP | Incomplete
 |Day 8| Present | Incomplete
@@ -84,13 +84,13 @@ https://www.lucidchart.com/invitations/accept/3ee24fc7-d76c-49ac-844e-82e7be70da
 | Work with API to populate database | H | 8hrs| 12hrs |
 | Authentication | H | 4hrs| 4hrs |
 | Create landing page | H | 3hrs|  |
-| Create new user form component | H | 3hrs|  |
+| Create new user form component | H | 3hrs| 0 |
 | Create user's league component | H | 3hrs| 2hrs |
-| Create league overview component | H | 8hrs|  |
-| Create new league form component | H | 3hrs|  |
-| Create team overview component | H | 6hrs| 8hrs |
-| Create drafting page component | H | 12hrs| 14hrs |
-| Total | H | 56hrs|  | 
+| Create league overview component | H | 8hrs| 1hr |
+| Create new league form component | H | 3hrs| 0 |
+| Create team overview component | H | 6hrs| 10hrs |
+| Create drafting page component | H | 12hrs| 16hrs |
+| Total | H | 56hrs| 54hrs | 
 
 ## Helper Functions
 
@@ -101,8 +101,9 @@ https://www.lucidchart.com/invitations/accept/3ee24fc7-d76c-49ac-844e-82e7be70da
 ## Additional Libraries
 | Library | What it Does | 
 | --- | :---: |  
-| Bootstrap/Material UI | Used to help style my application | 
+| Bootstrap | Used for chart of available players | 
 | Data.nba.net | Used to get all player info | 
+| Google Chart | Used to display team averages | 
 
 ## Code Snippet
 
@@ -112,11 +113,5 @@ Use this section to include a brief code snippet of functionality that you are p
 
 - Changed the API used for player data due to limited api calls per month
 
-#### SAMPLE.....
-| Original Plan | Outcome | 
-| --- | :---: |  
-| Have one Book component | Split that component into BookInfo and BookInteraction as the component grew too complicated | 
 
 ## Issues and Resolutions
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object

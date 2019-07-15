@@ -53,10 +53,10 @@ class DraftPage extends Component {
         });
     }
 
+    // Rerenders component to update the available playes table when a player is drafted
+
     async componentDidUpdate() {
         if (this.state.refreshPlayerList) {
-            // const playerList = this.state.availablePlayers;
-            // const updatedPlayerList = playerList.filter(player => player.id !== this.state.deletedPlayer.id);
             const updatedAvailablePlayersList = await axios.get('http://localhost:3000/available_players');
             const updatedAvailablePlayersListData = updatedAvailablePlayersList.data.map(player => {
                 return(
@@ -87,6 +87,8 @@ class DraftPage extends Component {
             });
         }
     }
+
+    // Removes player from available players table and adds to team_players table
 
     async draftPlayer() {
         const player = await axios.get(`http://localhost:3000/available_players/${this.state.selectedPlayer.id}`);

@@ -11,6 +11,7 @@ Team.create(team_name: "LinkedIn Park", draft_order: 6, league_id: 1)
 Team.create(team_name: "Panic at the Distro", draft_order: 7, league_id: 1)
 Team.create(team_name: "Slice Girls", draft_order: 8, league_id: 1)
 
+#  Uses playerID to retrieve stats for players
 
 def get_player_data(personId)
     require 'uri'
@@ -57,6 +58,8 @@ def get_player_data(personId)
     end
 end
 
+# Retrieves player ID's, positions, and name
+
 require 'uri'
 require 'net/http'
 require 'openssl'
@@ -88,7 +91,7 @@ std_leagues.each do |player|
     end
 end
 
-
+# THANK YOU TO HARMAN AND TYSON
 
 
 
